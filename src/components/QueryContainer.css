@@ -1,0 +1,97 @@
+.query-container {
+  flex: 0.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-end-rgb);
+  padding: 20px;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.input-container {
+  display: flex;
+  width: 70%;
+  justify-content: space-between; /* Align items with equal spacing */
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px; /* Adjusted padding for consistency */
+  width: 200px; /* Adjusted width to match button size */
+  font-size: 16px;
+  margin-right: 20px; /* Space between input and button */
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--button-bg); /* Use global button background color */
+  color: var(--button-text-color); /* Use global button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary-color); /* Use global secondary color for hover */
+}
+
+.introduction {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+/* Styling for the dropdown menu */
+.headlessui-menu-button {
+  padding: 10px 10px;
+  font-size: 16px;
+  color: var(--text-color); /* Match the text color */
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30px; /* Match width of the input */
+  box-sizing: border-box;
+}
+
+.headlessui-menu-button:hover {
+  background-color: var(--secondary-color); /* Use global secondary color for hover */
+}
+
+.headlessui-menu-items {
+  margin-top: 5px;
+  padding: 10px 0;
+  background-color: var(--input-bg); /* Match input background */
+  border: 1px solid var(--input-border-color); /* Match input border color */
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px; /* Ensure dropdown is wide enough */
+  z-index: 10000; /* Ensure dropdown appears above other elements */
+}
+
+.headlessui-menu-item {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.headlessui-menu-item:hover {
+  background-color: var(--secondary-color); /* Use global secondary color for hover */
+}
+
+.submit-button {
+  color: var(--button-text-color);
+
+}

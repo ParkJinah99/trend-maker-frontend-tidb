@@ -1,0 +1,10 @@
+/* LandingPage.css */
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-end-rgb);
+  color: var(--text-color-light);
+}
+

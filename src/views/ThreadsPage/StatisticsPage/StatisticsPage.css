@@ -1,0 +1,257 @@
+/* Main layout */
+.statistics-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Visualization Grid */
+.visualizations {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Global pie chart container */
+.global-piechart-container,
+.chart-container,
+.table-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Title for the global pie chart section and other chart sections */
+.global-piechart-title,
+.chart-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Responsive flex layout for pie charts */
+.chart-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* Distribute the pie charts evenly */
+  gap: 15px;
+}
+
+/* Individual pie chart container */
+.chart-item {
+  flex: 1 1 calc(25% - 15px);
+  /* Responsive basis for 4 columns */
+  min-width: 250px;
+  /* Ensure a minimum size for the charts */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Pie chart container */
+.pie-chart {
+  width: 100%;
+  height: auto;
+  position: relative;
+  /* Required for Chart.js to resize dynamically */
+}
+
+/* Title below the pie chart */
+.pie-chart-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+/* Global legend for all pie charts */
+.global-legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* Legend items style */
+.legend-item {
+  margin-right: 20px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Color block in the legend */
+.legend-color {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 1200px) {
+  .chart-item {
+    flex: 1 1 calc(50% - 15px);
+    /* Adjust to 2 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-item {
+    flex: 1 1 100%;
+    /* Adjust to a single column */
+  }
+}
+
+/* Bar and Line chart containers */
+.bar-chart-container,
+.line-chart-container {
+  flex: 1 1 auto;
+  /* Allow the container to be flexible */
+  width: 100%;
+  /* Ensure full-width usage */
+  height: auto;
+  /* Allow height to adjust dynamically */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Stack the title and chart vertically */
+  align-items: center;
+}
+
+/* Title for the bar and line chart sections */
+.chart-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Make the chart adapt to its container */
+.chart-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* Required for Chart.js to properly resize */
+}
+
+.bar-chart-container canvas,
+.line-chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Responsive adjustments for the bar and line charts */
+@media (max-width: 1200px) {
+
+  .bar-chart-container,
+  .line-chart-container {
+    height: 350px;
+    /* Adjust height for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+
+  .bar-chart-container,
+  .line-chart-container {
+    height: 300px;
+    /* Adjust height for small screens */
+  }
+}
+
+
+/* Tables container (YouTube and Shopping) */
+.table-container {
+  flex: 1 1 auto;
+  /* Ensure it takes the same flexible space as other containers */
+  width: 100%;
+  /* Ensure full-width usage */
+  height: auto;
+  /* Allow height to adjust dynamically */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Align content vertically */
+  align-items: center;
+  /* Center the content horizontally */
+  justify-content: space-between;
+  /* Ensure the content fills the container */
+}
+
+/* DataGrid or Table adjustments */
+.table-container .MuiDataGrid-root,
+.table-container table {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Adjust padding and margins within the table container */
+.table-container .MuiDataGrid-root,
+.table-container table {
+  padding: 0;
+  margin: 0;
+}
+
+/* Adjust font styling to match other chart containers */
+.table-container h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+/* Font styling across all charts */
+.statistics-page,
+.chart-item h4,
+.table-container h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Add spacing between chart elements */
+.visualizations>div {
+  margin-bottom: 25px;
+}
+
+.loading-spinner-statistics {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

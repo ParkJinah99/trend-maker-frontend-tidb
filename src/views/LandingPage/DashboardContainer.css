@@ -1,0 +1,150 @@
+.dashboard-container {
+  background: var(--foreground-rgb);
+  color: var(--text-color);
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.message {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-rectangles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.rectangle {
+  display: flex;
+  align-items: center;
+  background-color: var(--dashboard-rectangle-color);
+  padding: 20px;
+  text-align: left;
+  border-radius: 8px;
+  font-size: 1.2em;
+  flex: 1;
+  height: 120px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+
+.rectangle-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.data-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.difference {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+
+.data {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.data-name {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--dashboard-data-name-color);
+}
+
+.bottom-charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chart-container,
+.table-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.chart-container {
+  height: 400px;
+}
+
+.table-container {
+  height: auto;
+}
+
+.chart-title {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.top-categories {
+  margin-top: 20px;
+}
+
+.top-categories h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.top-categories ol {
+  padding-left: 20px;
+}
+
+.top-categories li {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+@media (max-width: 1200px) {
+  .top-rectangles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bottom-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container,
+  .table-container {
+    width: 100%;
+  }
+}
+
+.loading-spinner-dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

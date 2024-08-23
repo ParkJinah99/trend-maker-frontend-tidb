@@ -1,0 +1,5 @@
+.app {
+  overflow: hidden;
+  height: 100vh; /* Ensure the app takes full viewport height */
+  width: 100vw;  /* Ensure the app takes full viewport width */
+}

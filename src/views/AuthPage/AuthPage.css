@@ -1,0 +1,92 @@
+/*AuthPage.css*/
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-end-rgb);
+}
+
+.auth-page h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: var(--text-color);
+}
+
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 10px;
+  background-color: var(--form-background-color);
+  box-shadow: 0px 4px 8px var(--box-shadow-color);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid var(--form-border-color);
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+/* Specific input-group styling */
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: var(--button-text-color);
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Add margin above the button */
+}
+
+
+button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+.toggle-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: var(--secondary-color);
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

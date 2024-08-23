@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define custom root variables and handle dark mode preferences */
+:root {
+  --foreground-rgb: 41, 50, 65; /* Dark Navy for main text (#293241) */
+  --background-start-rgb: 224, 251, 252; /* Light Cyan for background gradient start (#e0fbfc) */
+  --background-end-rgb: 245, 245, 245; /* Very light grey for background gradient end */
+  --primary-color: #3d5a80; /* Dark Blue for primary highlights */
+  --header-color: #293241; /* Header color using dark blue */
+  --secondary-color: #e47513; /* Light Blue for hover and accents */
+  --text-color: #293241; /* Dark Navy for text */
+  --error-color: #ee6c4d; /* Coral for error messages */
+  --input-bg: #ffffff; /* Light Cyan for input backgrounds */
+  --button-bg: var(--primary-color); /* Button background using dark blue */
+  --button-text-color: #ffffff; /* White text for buttons */
+  --tab-border-color: #e7e8e8 ; /* Light Blue for tab borders */
+  --tab-background: #e7e8e8; /* Light Cyan for tabs */
+  --tab-button-background: #e7e8e8; /* Light Cyan for tab buttons */
+  --tab-text-color: #293241; /* Dark Navy for tab text */
+  --active-tab-background: #ffffff; /* Dark Blue for active tab background */
+  --active-tab-border-color: #293241; /* Dark Navy for active tab border */
+  --active-tab-text-color: #ffffff; /* White for active tab text */
+  --tab-content-background: #ffffff; /* White for tab content background */
+  --form-border-color: #dddbdb; /* Light Blue for form borders */
+  --form-background-color: #dddbdb; /* Light Cyan for form backgrounds */
+  --box-shadow-color: rgba(41, 50, 65, 0.1); /* Subtle shadow using dark navy */
+  --tab-background-color: #ffffff; /* Light Cyan for tabs */
+  --brand-header-color: #3d5a80; /* Dark Blue for branding */
+  --dashboard-rectangle-color: #ffffff;
+  --dashboard-data-name-color: #293241; /* Dark Navy for dashboard data names */
+}
+
+/* General body and HTML styling */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(var(--background-end-rgb));
+  color: rgb(var(--foreground-rgb));
+}
+
+/* Reset box sizing across all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Utility classes and additional styles */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+}
+
+/* Error message styling */
+.error-message {
+  color: var(--error-color);
+}
+
+/* Message container styling */
+.message-container {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--form-border-color);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.dark input[type="text"],
+body.dark input[type="password"],
+body.dark input[type="email"] {
+  background-color: var(--input-bg); /* Adjusted for dark mode */
+}
+
+/* Floating dark mode toggle */
+.floating-dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;
+}

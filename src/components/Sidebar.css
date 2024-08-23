@@ -1,0 +1,39 @@
+
+/* Sidebar styling */
+.sidebar {
+  height: 100vh; /* Set the height of the sidebar to the full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+.sidebar li {
+padding: 8px;
+margin: 0;
+}
+
+.sidebar .sidebar-header {
+font-weight: bold;
+font-size: 2rem; /* Increase the font size */
+margin-bottom: 8px; /* Add some space below the header */
+}  
+.sidebar .item {
+cursor: pointer;
+}
+
+.button {
+  background-color: var(--tab-content-background);
+  padding: var(--button-padding);
+  color: var(--button-text-color);
+}
+
+.tap-dropdown-item {
+  background-color: var(--tab-background);
+}
+
+.dark\:text-gray-200:is(.dark *){
+  color: var(--header-color);
+}

@@ -1,0 +1,221 @@
+/* --- Strategies Page Layout --- */
+.strategies-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 1:3 ratio */
+  gap: 20px;
+  padding: 0;
+  background-color: var(--tab-background-color);
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.strategies-container {
+  padding: 0;
+  border-radius: 10px;
+  background-color: var(--active-tab-background);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+.branding-container {
+  padding: 0;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background-color: var(--active-tab-background);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+/* Headers for Strategies and Branding */
+.section-header {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--text-color);
+  border-bottom: 3px solid #e47513;
+}
+
+.strategies-header,
+.brand-header {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--brand-header-color);
+}
+
+/* Each branding and strategy item is a rounded rectangle */
+.strategies-item {
+  background-color: var(--active-tab-background);
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* The branding item layout adjusts within the 1fr grid */
+.branding-item {
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--active-tab-background);
+  color: var(--text-color);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+/* Loading Spinner Styling */
+.loading-spinner-strategies {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Typography */
+.brand-name {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.brand-slogan {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+/* Marketing Strategy Styling */
+.marketing-strategy-item {
+  margin-bottom: 10px;
+}
+
+.marketing-strategy-item strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.marketing-strategy-item span {
+  font-size: 1rem;
+}
+
+/* Color Palette Container */
+.color-palettes-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Individual Color Palette Section */
+/* Adjust the color palettes and logos to fit within the grid without affecting the ratio */
+.color-palette-section {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid var(--box-shadow-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--active-tab-background);
+}
+
+
+/* Color Swatch Container */
+.color-swatch-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Individual Color Swatch */
+.color-swatch {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 1px solid var(--box-shadow-color);
+  border-radius: 4px;
+}
+
+/* Tooltip Styling */
+.color-tooltip {
+  display: none;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Show tooltip on hover */
+.color-swatch:hover .color-tooltip {
+  display: block;
+}
+
+/* Logo Image Container */
+.logo-image-container {
+  display: grid;
+  gap: 15px; /* Space between grid items */
+  justify-items: center;
+  align-items: center;
+}
+
+/* Adjust image containers within branding and strategies to fit inside their parent containers */
+.logo-image,
+.brand-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Reference Logo Section */
+.reference-logo-image-container {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr); /* Adjusts the reference logos into a three-column grid */
+  justify-items: center;
+  align-items: center;
+}
+
+.reference-logo {
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--active-tab-background);
+  color: var(--text-color);
+  display: grid;
+  gap: 10px;
+}
+
+/* Ensure logo images fit within the containers */
+.reference-logo .logo-image {
+  max-width: 100%; /* Prevents overflow beyond container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the image scales while maintaining aspect ratio */
+}
